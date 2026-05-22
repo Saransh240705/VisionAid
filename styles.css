@@ -1,9 +1,11 @@
 /* ===== CSS CUSTOM PROPERTIES ===== */
 :root {
-  --green: #00c853;
-  --green-dark: #00a844;
-  --green-light: #e8f5e9;
-  --green-glow: rgba(0, 200, 83, 0.3);
+  --primary: #2AABE0;
+  --primary-dark: #1E8CBF;
+  --primary-light: #e3f4fc;
+  --primary-glow: rgba(42, 171, 224, 0.3);
+  --accent-red: #E52020;
+  --accent-yellow: #FFD700;
   --dark: #0d1b2a;
   --dark-lighter: #1b2838;
   --dark-card: #162232;
@@ -11,9 +13,9 @@
   --text-secondary: #555;
   --text-light: #888;
   --bg-white: #ffffff;
-  --bg-off: #f8faf8;
-  --bg-light: #f0f4f0;
-  --border: #e0e8e0;
+  --bg-off: #f7fafd;
+  --bg-light: #edf3f8;
+  --border: #d8e4ef;
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -21,7 +23,7 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 4px 30px rgba(0, 200, 83, 0.15);
+  --shadow-glow: 0 4px 30px rgba(42, 171, 224, 0.2);
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --font-body: "Inter", -apple-system, sans-serif;
   --font-heading: "Outfit", -apple-system, sans-serif;
@@ -106,10 +108,10 @@ ul {
 @keyframes glowPulse {
   0%,
   100% {
-    box-shadow: 0 0 20px rgba(0, 200, 83, 0.2);
+    box-shadow: 0 0 20px rgba(42, 171, 224, 0.2);
   }
   50% {
-    box-shadow: 0 0 40px rgba(0, 200, 83, 0.4);
+    box-shadow: 0 0 40px rgba(42, 171, 224, 0.4);
   }
 }
 
@@ -178,12 +180,12 @@ ul {
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--green);
+  background: var(--primary);
   transition: var(--transition);
 }
 
 .nav-link:hover {
-  color: var(--green);
+  color: var(--primary);
 }
 
 .nav-link:hover::after {
@@ -191,7 +193,7 @@ ul {
 }
 
 .nav-cta {
-  background: var(--green);
+  background: var(--primary);
   color: #fff;
   padding: 10px 24px;
   border-radius: 50px;
@@ -201,7 +203,7 @@ ul {
 }
 
 .nav-cta:hover {
-  background: var(--green-dark);
+  background: var(--primary-dark);
   box-shadow: var(--shadow-glow);
   transform: translateY(-2px);
 }
@@ -251,12 +253,12 @@ ul {
 }
 
 .btn-primary {
-  background: var(--green);
+  background: var(--primary);
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--green-dark);
+  background: var(--primary-dark);
   box-shadow: var(--shadow-glow);
   transform: translateY(-2px);
 }
@@ -268,8 +270,8 @@ ul {
 }
 
 .btn-secondary:hover {
-  border-color: var(--green);
-  color: var(--green);
+  border-color: var(--primary);
+  color: var(--primary);
   transform: translateY(-2px);
 }
 
@@ -280,8 +282,8 @@ ul {
 }
 
 .btn-outline:hover {
-  border-color: var(--green);
-  color: var(--green);
+  border-color: var(--primary);
+  color: var(--primary);
   transform: translateY(-2px);
 }
 
@@ -321,12 +323,12 @@ ul {
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--primary);
   margin-bottom: 16px;
 }
 
 .section-tag.light {
-  color: var(--green);
+  color: var(--primary);
 }
 
 .section-title {
@@ -370,8 +372,8 @@ ul {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--green-light);
-  color: var(--green-dark);
+  background: var(--primary-light);
+  color: var(--primary-dark);
   padding: 6px 16px;
   border-radius: 50px;
   font-size: 0.72rem;
@@ -384,7 +386,7 @@ ul {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--primary);
   animation: pulse 2s infinite;
 }
 
@@ -398,7 +400,7 @@ ul {
 }
 
 .hero-accent {
-  color: var(--green);
+  color: var(--primary);
   font-style: italic;
 }
 
@@ -511,7 +513,7 @@ ul {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--green);
+  color: var(--primary);
 }
 
 .device-name {
@@ -566,7 +568,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--green-light);
+  background: var(--primary-light);
   border-radius: var(--radius-sm);
 }
 
@@ -607,7 +609,7 @@ ul {
 }
 
 .challenge-card:hover {
-  border-color: var(--green);
+  border-color: var(--primary);
   box-shadow: var(--shadow-glow);
   transform: translateY(-4px);
 }
@@ -618,7 +620,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--green-light);
+  background: var(--primary-light);
   border-radius: var(--radius-sm);
   margin-bottom: 20px;
 }
@@ -699,13 +701,13 @@ ul {
 }
 
 .sc-badge.wearable {
-  background: var(--green);
+  background: var(--primary);
 }
 .sc-badge.hardware {
-  background: var(--green);
+  background: var(--primary);
 }
 .sc-badge.software {
-  background: var(--green);
+  background: var(--primary);
 }
 
 .sc-content {
@@ -748,7 +750,7 @@ ul {
 }
 
 .learn-more:hover {
-  color: var(--green);
+  color: var(--primary);
   transform: translateX(4px);
 }
 
@@ -786,7 +788,7 @@ ul {
 }
 
 .step-card:hover {
-  border-color: rgba(0, 200, 83, 0.3);
+  border-color: rgba(42, 171, 224, 0.3);
   transform: translateY(-6px);
 }
 
@@ -976,7 +978,7 @@ ul {
 }
 
 .pd-tag.accent {
-  color: var(--green);
+  color: var(--primary);
 }
 
 .pd-title {
@@ -1041,8 +1043,8 @@ ul {
   height: 200px;
   background: radial-gradient(
     circle,
-    rgba(0, 200, 83, 0.4) 0%,
-    rgba(0, 200, 83, 0.1) 40%,
+    rgba(42, 171, 224, 0.4) 0%,
+    rgba(42, 171, 224, 0.1) 40%,
     transparent 70%
   );
   border-radius: 50%;
@@ -1062,13 +1064,13 @@ ul {
 .tech-glow::before {
   width: 1px;
   height: 160px;
-  background: linear-gradient(transparent, var(--green), transparent);
+  background: linear-gradient(transparent, var(--primary), transparent);
 }
 
 .tech-glow::after {
   width: 160px;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--green), transparent);
+  background: linear-gradient(to right, transparent, var(--primary), transparent);
 }
 
 .battery-badge {
@@ -1091,7 +1093,7 @@ ul {
   font-size: 0.6rem;
   font-weight: 700;
   letter-spacing: 1.5px;
-  color: var(--green);
+  color: var(--primary);
 }
 
 .bb-value {
@@ -1138,7 +1140,7 @@ ul {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--primary);
   animation: pulse 2s infinite;
 }
 
@@ -1166,7 +1168,7 @@ ul {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--primary);
   margin-top: 6px;
   flex-shrink: 0;
 }
@@ -1292,7 +1294,7 @@ ul {
 }
 
 .social-icon:hover {
-  background: var(--green);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -1321,7 +1323,7 @@ ul {
 }
 
 .footer-col a:hover {
-  color: var(--green);
+  color: var(--primary);
 }
 
 .footer-bottom {
@@ -1349,7 +1351,443 @@ ul {
 }
 
 .footer-legal a:hover {
-  color: var(--green);
+  color: var(--primary);
+}
+
+/* ===== SCROLL PROGRESS BAR ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, #2AABE0, #5BC4EB, #8AD6F0);
+  z-index: 1100;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 10px rgba(42, 171, 224, 0.5);
+}
+
+/* ===== PARTICLE CANVAS ===== */
+.hero {
+  position: relative;
+}
+
+#particleCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== TYPING ANIMATION ===== */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 0.9em;
+  background: var(--primary);
+  margin-left: 4px;
+  animation: cursorBlink 1s step-end infinite;
+  vertical-align: text-bottom;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ===== SOS ALARM BUTTON ===== */
+.sos-alarm-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #ff4444, #ff6b35);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px rgba(255, 68, 68, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: sosPulse 2s ease-in-out infinite;
+}
+
+.sos-alarm-btn:hover {
+  transform: scale(1.12);
+  box-shadow: 0 6px 32px rgba(255, 68, 68, 0.6);
+}
+
+.sos-alarm-btn:active {
+  transform: scale(0.95);
+}
+
+.sos-alarm-btn svg {
+  width: 28px;
+  height: 28px;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}
+
+.sos-label {
+  position: absolute;
+  right: 72px;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.sos-alarm-btn:hover .sos-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@keyframes sosPulse {
+  0%, 100% {
+    box-shadow: 0 4px 24px rgba(255, 68, 68, 0.4), 0 0 0 0 rgba(255, 68, 68, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 24px rgba(255, 68, 68, 0.4), 0 0 0 14px rgba(255, 68, 68, 0);
+  }
+}
+
+/* ===== ALARM MODAL ===== */
+.alarm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.alarm-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.alarm-overlay-bg {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 0, 0, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  animation: alarmFlash 1s ease-in-out infinite;
+}
+
+.alarm-overlay.active .alarm-overlay-bg {
+  animation: alarmFlash 1s ease-in-out infinite;
+}
+
+@keyframes alarmFlash {
+  0%, 100% { background: rgba(20, 0, 0, 0.85); }
+  50% { background: rgba(60, 0, 0, 0.9); }
+}
+
+.alarm-modal {
+  position: relative;
+  background: linear-gradient(160deg, rgba(40, 10, 10, 0.95), rgba(20, 5, 5, 0.98));
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 48px 40px;
+  max-width: 440px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(255, 68, 68, 0.2), inset 0 0 60px rgba(255, 68, 68, 0.05);
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.alarm-overlay.active .alarm-modal {
+  transform: scale(1) translateY(0);
+}
+
+.alarm-icon-wrapper {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff4444, #ff6b35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  animation: alarmIconPulse 0.6s ease-in-out infinite alternate;
+}
+
+@keyframes alarmIconPulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 68, 68, 0.4); }
+  100% { transform: scale(1.08); box-shadow: 0 0 30px rgba(255, 68, 68, 0.6); }
+}
+
+.alarm-icon-wrapper svg {
+  width: 40px;
+  height: 40px;
+}
+
+.alarm-modal h2 {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.alarm-modal .alarm-subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 28px;
+}
+
+.alarm-countdown {
+  margin-bottom: 28px;
+}
+
+.countdown-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 68, 68, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  position: relative;
+}
+
+.countdown-circle::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #ff4444;
+  animation: countdownSpin 1s linear infinite;
+}
+
+@keyframes countdownSpin {
+  to { transform: rotate(360deg); }
+}
+
+.countdown-number {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ff4444;
+}
+
+.countdown-label {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.alarm-location {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.alarm-location svg {
+  flex-shrink: 0;
+}
+
+.alarm-location-text {
+  text-align: left;
+}
+
+.alarm-location-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #ff6b35;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.alarm-location-coords {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+.alarm-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.alarm-btn {
+  flex: 1;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alarm-btn-cancel {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.alarm-btn-cancel:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+.alarm-btn-send {
+  background: linear-gradient(135deg, #ff4444, #ff2222);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(255, 68, 68, 0.4);
+}
+
+.alarm-btn-send:hover {
+  box-shadow: 0 6px 24px rgba(255, 68, 68, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Alarm sent confirmation */
+.alarm-sent {
+  display: none;
+}
+
+.alarm-sent.show {
+  display: block;
+}
+
+.alarm-sent-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2AABE0, #5BC4EB);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  animation: sentPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes sentPop {
+  0% { transform: scale(0); }
+  100% { transform: scale(1); }
+}
+
+.alarm-sent h2 {
+  color: #2AABE0;
+  margin-bottom: 8px;
+}
+
+.alarm-sent p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+.alarm-sent .alarm-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* ===== LIVE DASHBOARD ENHANCEMENTS ===== */
+.device-info .live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2AABE0;
+  margin-right: 4px;
+  animation: pulse 1.5s infinite;
+}
+
+.device-card {
+  transition: all 0.3s ease;
+}
+
+.device-card .updating {
+  animation: dataFlash 0.3s ease;
+}
+
+@keyframes dataFlash {
+  0% { color: var(--primary); }
+  100% { color: inherit; }
+}
+
+/* ===== MOUSE GLOW ===== */
+.hero-glow {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(42, 171, 224, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transition: transform 0.15s ease-out;
+  will-change: transform;
+}
+
+/* ===== STAGGERED REVEALS ===== */
+.stagger-1 { transition-delay: 0.1s !important; }
+.stagger-2 { transition-delay: 0.2s !important; }
+.stagger-3 { transition-delay: 0.3s !important; }
+.stagger-4 { transition-delay: 0.4s !important; }
+
+/* ===== CARD TILT MICRO-INTERACTIONS ===== */
+.challenge-card,
+.solution-card,
+.step-card {
+  will-change: transform;
+}
+
+.challenge-card:hover,
+.step-card:hover {
+  box-shadow: 0 12px 40px rgba(42, 171, 224, 0.15);
+}
+
+/* ===== NAV ACTIVE LINK ===== */
+.nav-link.active {
+  color: var(--primary);
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1381,7 +1819,7 @@ ul {
     padding: 24px;
     gap: 20px;
     box-shadow: var(--shadow-md);
-    border-bottom: 2px solid var(--green);
+    border-bottom: 2px solid var(--primary);
   }
 
   .nav-links.active {
@@ -1479,6 +1917,30 @@ ul {
   .section-title {
     font-size: 2rem;
   }
+
+  .sos-alarm-btn {
+    width: 56px;
+    height: 56px;
+    bottom: 24px;
+    right: 24px;
+  }
+
+  .sos-alarm-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .alarm-modal {
+    padding: 36px 28px;
+  }
+
+  .alarm-actions {
+    flex-direction: column;
+  }
+
+  .hero-glow {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1506,5 +1968,29 @@ ul {
   }
   .mission-stats {
     gap: 32px;
+  }
+
+  .sos-alarm-btn {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .sos-label {
+    display: none;
+  }
+
+  .alarm-modal h2 {
+    font-size: 1.4rem;
+  }
+
+  .countdown-number {
+    font-size: 2rem;
+  }
+
+  .countdown-circle {
+    width: 80px;
+    height: 80px;
   }
 }
